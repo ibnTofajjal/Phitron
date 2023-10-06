@@ -2,14 +2,21 @@
 
 int main() {
     
-    int A =100;
-    long long int B = 200000000000000;
-    float C = 10.065;
-    char D = 'A';
+    int A;
+    long long int B;
+    float C;
+    char D;
+    
+    scanf("%d", &A);
+    scanf("%lld", &B);
+    scanf("%f", &C);
+    scanf(" %c", &D);
 
     printf("%d\n", A);
     printf("%lld\n", B);
     printf("%.2f\n", C);
     printf("%c\n", D);
+        
     return 0;
+    
 }
