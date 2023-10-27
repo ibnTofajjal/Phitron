@@ -16,3 +16,8 @@ int main () {
 
     return 0;
 }
+
+/*
+    copy string without using for loop or manually 
+    strcpy(a,b) // it's place the value of b to the a :D 
+*/
