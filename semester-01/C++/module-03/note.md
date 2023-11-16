@@ -29,3 +29,5 @@
         * variable of class type means a variable which is created from a class.
     - Object is a dynamic memory allocation.
         * dynamic memory allocation means memory is allocated at runtime.
+
+### What is constructor ?
