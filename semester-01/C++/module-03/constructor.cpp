@@ -20,6 +20,5 @@ int main () {
     Student joynal(20,5130,3.50);
     Student kamal(25,3080,2.60);
       
-
     return 0;
 }
