@@ -1,7 +1,6 @@
-2
-Joynal Bhai
-20
-4.50
-Rahat Bhai 
-25
-5.00
+5
+Bhaijan 20 4.50
+Rahat 45 5.00
+Fahat 24 3.00
+Chahat 35 1.00
+Nuzhat 55 2.00
