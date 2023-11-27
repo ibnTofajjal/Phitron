@@ -1,4 +1,0 @@
-3
-Amal 20 a 700
-Kamal 30 c 500
-Jamal 40 d 600
