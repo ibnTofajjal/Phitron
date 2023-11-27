@@ -1,15 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
-class Student {
-    public: 
+class Student
+{
+public:
     string name;
     int semister;
     double cgpa;
 };
 
-int main () {
+int main()
+{
 
     int n;
     cin >> n;
@@ -20,26 +21,21 @@ int main () {
         cin >> arr[i].name >> arr[i].semister >> arr[i].cgpa;
     }
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n -1 ; i++)
     {
-        for (int j =  i+1; j < n; j++)
+        for (int j = i + 1; j < n; j++)
         {
-            if(arr[i].cgpa > arr[j].cgpa)
+            if (arr[i].cgpa > arr[j].cgpa)
             {
                 swap(arr[i], arr[j]);
             }
         }
-        
     }
 
     for (int i = 0; i < n; i++)
     {
-                cout << arr[i].name << " " << arr[i].semister << " " << arr[i].cgpa << endl;
-
+        cout << arr[i].name << " " << arr[i].semister << " " << arr[i].cgpa << endl;
     }
-    
-    
-    
 
     return 0;
 }

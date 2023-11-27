@@ -1,5 +1,0 @@
-Chahat 35 1
-Nuzhat 55 2
-Fahat 24 3
-Bhaijan 20 4.5
-Rahat 45 5
