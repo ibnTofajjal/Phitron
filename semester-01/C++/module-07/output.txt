@@ -1,5 +1,3 @@
-Chahat 35 1
-Nuzhat 55 2
-Fahat 24 3
-Bhaijan 20 4.5
-Rahat 45 5
+Kamal 30 c 500
+Jamal 40 d 600
+Amal 20 a 700

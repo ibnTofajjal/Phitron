@@ -1,6 +1,4 @@
-5
-Bhaijan 20 4.50
-Rahat 45 5.00
-Fahat 24 3.00
-Chahat 35 1.00
-Nuzhat 55 2.00
+3
+Amal 20 a 700
+Kamal 30 c 500
+Jamal 40 d 600
