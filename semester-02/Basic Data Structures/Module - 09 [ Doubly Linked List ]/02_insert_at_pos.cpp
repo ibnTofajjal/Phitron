@@ -1,4 +1,123 @@
-<!---
+#include <bits/stdc++.h>
+using namespace std;
+
+/*
+    ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+    ┃             NODE 🎉             ┃
+    ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+*/
+class Node
+{
+public:
+    int val;
+    Node *prev;
+    Node *next;
+    Node(int val)
+    {
+        this->val = val;
+        this->prev = NULL;
+        this->next = NULL;
+    }
+};
+
+/*
+    ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+    ┃         PRINT NORMAL WAY        ┃
+    ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+*/
+void print_normal_way(Node *head)
+{
+    Node *temp = head;
+
+    while (temp != NULL)
+    {
+        cout << temp->val << endl;
+        temp = temp->next;
+    }
+}
+
+/*
+    ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+    ┃        PRINT REVERSE WAY        ┃
+    ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+*/
+
+void print_reverse_way(Node *tail)
+{
+    Node *temp = tail;
+
+    while (temp != NULL)
+    {
+        cout << temp->val << endl;
+        temp = temp->prev;
+    }
+}
+
+/*
+    ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+    ┃       INSERT AT POSSITION       ┃
+    ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+*/
+
+void insert_at_pos(Node *head, int pos, int val)
+{
+    Node *newNode = new Node(val);
+    Node *tmp = head;
+
+    for (int i = 1; i <= pos - 1; i++) // get the exect position
+    {
+        tmp = tmp->next;
+    }
+
+    /*
+    ┃   NULL | 10 | NEXT          10 | 20 | 30          20 | 30 | 40        30 | 40 | NULL
+    ┃   NEW_NODE = 100
+    */
+
+    newNode->next = tmp->next; // 100->30
+    tmp->next = newNode;       // 20 -> 100
+
+    newNode->next->prev = newNode; // 100 <- 30
+    newNode->prev = tmp;           // 20<-100
+}
+
+/*
+    ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+    ┃             MAIN 🎉             ┃
+    ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+*/
+
+int main()
+{
+    Node *head = new Node(10);
+    Node *a = new Node(20);
+    Node *b = new Node(30);
+    Node *c = new Node(40);
+    Node *tail = c;
+
+    head->next = a;
+
+    a->prev = head;
+    a->next = b;
+
+    b->prev = a;
+    b->next = c;
+
+    c->prev = b;
+
+    insert_at_pos(head, 2, 100);
+
+    cout << "Normal way: " << endl;
+    print_normal_way(head);
+
+    cout << "Reverse way: " << endl;
+    print_reverse_way(tail);
+
+    return 0;
+}
+
+/*
+
 
 
 
@@ -39,4 +158,5 @@ LLLLLLLLLLLLLLLLLLLLLLLLiiiiiiii nnnnnn    nnnnnnkkkkkkkk    kkkkkkk eeeeeeeeeee
 
 
 
--->
+
+*/
