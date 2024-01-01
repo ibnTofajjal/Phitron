@@ -21,7 +21,7 @@ int findDifference(Node *head)
     int minValue = INT_MAX;
     int maxValue = INT_MIN;
 
-        while (head != NULL)
+    while (head != NULL)
     {
         minValue = min(minValue, head->val);
         maxValue = max(maxValue, head->val);
